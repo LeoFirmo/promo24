@@ -1,45 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ── SEO BÁSICO ────────────────────────────────────────────── -->
   <title>PROMO24 | As Melhores Ofertas da Internet</title>
+  <meta name="description" content="Encontre as melhores ofertas, descontos e promoções atualizadas diariamente no PROMO24. Economize em smartphones, TVs, informática, casa e muito mais com segurança." />
+  <meta name="keywords" content="ofertas, promoções, descontos, cupons, smartphones baratos, comprar tv, promo24, ofertas do dia" />
+  <meta name="author" content="PROMO24" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://promo24.com.br/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  
+  <!-- ── OPEN GRAPH (FACEBOOK, WHATSAPP, LINKEDIN) ─────────────── -->
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PROMO24 | As Melhores Ofertas da Internet" />
+  <meta property="og:description" content="Encontre as melhores ofertas, descontos e promoções atualizadas diariamente no PROMO24. Economize com segurança!" />
+  <meta property="og:url" content="https://promo24.com.br/" />
+  <meta property="og:site_name" content="PROMO24" />
+  <meta property="og:image" content="https://promo24.com.br/logo.png" />
+  <meta property="og:image:alt" content="Logo do site PROMO24" />
+
+  <!-- ── TWITTER CARDS ─────────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="PROMO24 | As Melhores Ofertas da Internet" />
+  <meta name="twitter:description" content="Encontre as melhores ofertas, descontos e promoções atualizadas diariamente no PROMO24." />
+  <meta name="twitter:image" content="https://promo24.com.br/logo.png" />
+
+  <!-- ── SCHEMA MARKUP (JSON-LD) PARA O GOOGLE ─────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "PROMO24",
+    "url": "https://promo24.com.br/",
+    "description": "As Melhores Ofertas da Internet em um só lugar.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://promo24.com.br/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PROMO24",
+    "url": "https://promo24.com.br/",
+    "logo": "https://promo24.com.br/logo.png",
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como o Promo24 encontra as promoções?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nossa equipe utiliza ferramentas avançadas de monitoramento em tempo real para rastrear o histórico de preços das maiores lojas virtuais do Brasil. Apenas ofertas com descontos reais e comprovados são aprovadas e publicadas em nossa plataforma."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "As ofertas são atualizadas diariamente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! O Promo24 é atualizado 24 horas por dia, 7 dias por semana. Algumas promoções, como ofertas relâmpago, cupons e queimas de estoque duram poucas horas, por isso nosso sistema trabalha ininterruptamente."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O Promo24 vende os produtos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Não. Nós somos um portal de curadoria de ofertas e não realizamos a venda direta. Ao clicar em 'Pegar Promoção', você é redirecionado de forma segura e direta para o site oficial da loja parceira (como Mercado Livre, Amazon, etc.), onde concluirá a sua compra."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Os preços podem mudar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim. As lojas varejistas alteram seus preços e finalizam promoções de acordo com a disponibilidade de estoque. Se o preço ao clicar for diferente do divulgado, significa que a loja encerrou a oferta ou o produto esgotou."
+        }
+      }
+    ]
+  }
+  </script>
+
   <meta name="referrer" content="no-referrer" />
+  <link rel="icon" type="image/png" href="/logo.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@700;800&display=swap"
+    rel="stylesheet" />
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
   <style>
     /* ── DESIGN TOKENS ─────────────────────────────────────────── */
     :root {
-      --dark:        #0C0F1A;
-      --dark-2:      #141828;
-      --dark-3:      #1D2235;
-      --brand:       #F97316;
+      --dark: #0C0F1A;
+      --dark-2: #141828;
+      --dark-3: #1D2235;
+      --brand: #F97316;
       --brand-hover: #EA6C10;
-      --brand-glow:  rgba(249,115,22,.18);
-      --gold:        #F59E0B;
-      --green:       #059669;
-      --green-bg:    #ECFDF5;
-      --purple:      #7C3AED;
-      --bg:          #EEF1F8;
-      --card:        #FFFFFF;
-      --text:        #0C0F1A;
-      --text-2:      #374151;
-      --muted:       #6B7280;
-      --border:      #E5E7EB;
-      --border-2:    #F3F4F6;
-      --radius:      18px;
-      --shadow-card: 0 2px 8px rgba(0,0,0,.05), 0 1px 3px rgba(0,0,0,.04);
-      --shadow-hover:0 16px 40px rgba(0,0,0,.12), 0 4px 12px rgba(0,0,0,.06);
-      --font:        'Plus Jakarta Sans', system-ui, sans-serif;
-      --font-price:  'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+      --brand-glow: rgba(249, 115, 22, .18);
+      --gold: #F59E0B;
+      --green: #059669;
+      --green-bg: #ECFDF5;
+      --purple: #7C3AED;
+      --bg: #EEF1F8;
+      --card: #FFFFFF;
+      --text: #0C0F1A;
+      --text-2: #374151;
+      --muted: #6B7280;
+      --border: #E5E7EB;
+      --border-2: #F3F4F6;
+      --radius: 18px;
+      --shadow-card: 0 2px 8px rgba(0, 0, 0, .05), 0 1px 3px rgba(0, 0, 0, .04);
+      --shadow-hover: 0 16px 40px rgba(0, 0, 0, .12), 0 4px 12px rgba(0, 0, 0, .06);
+      --font: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --font-price: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: var(--font);
       background: var(--bg);
@@ -49,6 +154,19 @@
       flex-direction: column;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+    }
+
+    /* ── UTILIDADES SEO ─────────────────────────────────────────── */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
     }
 
     /* ── STICKY WRAPPER ─────────────────────────────────────────── */
@@ -62,7 +180,7 @@
     .site-header {
       background: linear-gradient(135deg, var(--dark) 0%, var(--dark-2) 100%);
       padding: 14px 0;
-      border-bottom: 1px solid rgba(255,255,255,.06);
+      border-bottom: 1px solid rgba(255, 255, 255, .06);
     }
 
     .header-inner {
@@ -84,7 +202,10 @@
       flex-shrink: 0;
       transition: opacity .15s;
     }
-    .logo:hover { opacity: .88; }
+
+    .logo:hover {
+      opacity: .88;
+    }
 
     .logo-img {
       height: 72px;
@@ -107,11 +228,13 @@
       align-items: center;
       justify-content: center;
       font-size: 25px;
-      box-shadow: 0 4px 14px rgba(249,115,22,.45);
+      box-shadow: 0 4px 14px rgba(249, 115, 22, .45);
       flex-shrink: 0;
     }
 
-    .logo-text-wrap { line-height: 1; }
+    .logo-text-wrap {
+      line-height: 1;
+    }
 
     .logo-name {
       font-size: 34px;
@@ -119,12 +242,16 @@
       color: #fff;
       letter-spacing: -1.5px;
     }
-    .logo-name em { color: var(--brand); font-style: normal; }
+
+    .logo-name em {
+      color: var(--brand);
+      font-style: normal;
+    }
 
     .logo-domain {
       font-size: 9.5px;
       font-weight: 600;
-      color: rgba(255,255,255,.35);
+      color: rgba(255, 255, 255, .35);
       letter-spacing: 1.5px;
       text-transform: uppercase;
       margin-top: 1px;
@@ -142,7 +269,7 @@
       left: 16px;
       top: 50%;
       transform: translateY(-50%);
-      color: rgba(255,255,255,.35);
+      color: rgba(255, 255, 255, .35);
       font-size: 17px;
       pointer-events: none;
       z-index: 1;
@@ -151,8 +278,8 @@
     #search-input {
       width: 100%;
       height: 46px;
-      background: rgba(255,255,255,.08);
-      border: 1.5px solid rgba(255,255,255,.1);
+      background: rgba(255, 255, 255, .08);
+      border: 1.5px solid rgba(255, 255, 255, .1);
       border-radius: 100px;
       padding: 0 46px 0 44px;
       font-family: var(--font);
@@ -163,9 +290,13 @@
       transition: background .2s, border-color .2s, box-shadow .2s;
       caret-color: var(--brand);
     }
-    #search-input::placeholder { color: rgba(255,255,255,.32); }
+
+    #search-input::placeholder {
+      color: rgba(255, 255, 255, .32);
+    }
+
     #search-input:focus {
-      background: rgba(255,255,255,.12);
+      background: rgba(255, 255, 255, .12);
       border-color: var(--brand);
       box-shadow: 0 0 0 3px var(--brand-glow);
     }
@@ -177,23 +308,29 @@
       transform: translateY(-50%);
       background: none;
       border: none;
-      color: rgba(255,255,255,.35);
+      color: rgba(255, 255, 255, .35);
       font-size: 18px;
       cursor: pointer;
       display: none;
       align-items: center;
       transition: color .15s;
     }
-    #clear-search:hover { color: var(--brand); }
-    #clear-search.show { display: flex; }
+
+    #clear-search:hover {
+      color: var(--brand);
+    }
+
+    #clear-search.show {
+      display: flex;
+    }
 
     /* Verified badge */
     .verified {
       display: flex;
       align-items: center;
       gap: 6px;
-      background: rgba(16,185,129,.12);
-      border: 1px solid rgba(16,185,129,.22);
+      background: rgba(16, 185, 129, .12);
+      border: 1px solid rgba(16, 185, 129, .22);
       color: #34D399;
       font-size: 11.5px;
       font-weight: 700;
@@ -207,14 +344,14 @@
     /* ── CATEGORY BAR ───────────────────────────────────────────── */
     .cat-bar {
       background: var(--dark-2);
-      border-bottom: 1px solid rgba(255,255,255,.07);
+      border-bottom: 1px solid rgba(255, 255, 255, .07);
       position: relative;
     }
 
     .cat-inner {
       max-width: 1320px;
       margin: 0 auto;
-      padding: 0 44px; /* Aumentado para 44px para criar a zona exclusiva das setas */
+      padding: 0 44px;
       position: relative;
       display: flex;
       align-items: center;
@@ -228,7 +365,7 @@
       height: 28px;
       background: var(--dark-3);
       color: #fff;
-      border: 1px solid rgba(255,255,255,.15);
+      border: 1px solid rgba(255, 255, 255, .15);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -238,20 +375,27 @@
       opacity: 0;
       visibility: hidden;
       transition: all 0.2s ease;
-      box-shadow: 0 2px 8px rgba(0,0,0,.4);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .4);
       font-size: 14px;
     }
+
     .cat-arrow.show {
       opacity: 1;
       visibility: visible;
     }
+
     .cat-arrow:hover {
       background: var(--brand);
       border-color: var(--brand);
     }
-    /* Posicionando as setinhas na margem livre (padding) */
-    .cat-arrow.left { left: 8px; }
-    .cat-arrow.right { right: 8px; }
+
+    .cat-arrow.left {
+      left: 8px;
+    }
+
+    .cat-arrow.right {
+      right: 8px;
+    }
 
     #category-scroll {
       display: flex;
@@ -264,10 +408,20 @@
       user-select: none;
       width: 100%;
     }
-    #category-scroll::-webkit-scrollbar { display: none; }
-    #category-scroll.dragging { cursor: grabbing; }
 
-    #category-filters { display: flex; gap: 6px; padding: 1px 2px; }
+    #category-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    #category-scroll.dragging {
+      cursor: grabbing;
+    }
+
+    #category-filters {
+      display: flex;
+      gap: 6px;
+      padding: 1px 2px;
+    }
 
     .cat-btn {
       flex-shrink: 0;
@@ -276,24 +430,26 @@
       font-family: var(--font);
       font-size: 12.5px;
       font-weight: 700;
-      border: 1.5px solid rgba(255,255,255,.1);
+      border: 1.5px solid rgba(255, 255, 255, .1);
       background: transparent;
-      color: rgba(255,255,255,.5);
+      color: rgba(255, 255, 255, .5);
       cursor: pointer;
       transition: all .18s;
       white-space: nowrap;
       letter-spacing: .1px;
     }
+
     .cat-btn:hover {
-      border-color: rgba(255,255,255,.22);
-      color: rgba(255,255,255,.85);
-      background: rgba(255,255,255,.05);
+      border-color: rgba(255, 255, 255, .22);
+      color: rgba(255, 255, 255, .85);
+      background: rgba(255, 255, 255, .05);
     }
+
     .cat-btn.active {
       background: var(--brand);
       border-color: var(--brand);
       color: #fff;
-      box-shadow: 0 2px 14px rgba(249,115,22,.38);
+      box-shadow: 0 2px 14px rgba(249, 115, 22, .38);
     }
 
     /* ── MAIN ───────────────────────────────────────────────────── */
@@ -351,13 +507,24 @@
     }
 
     @media (min-width: 600px) {
-      #product-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      #product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
     }
+
     @media (min-width: 900px) {
-      #product-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+      #product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
     }
+
     @media (min-width: 1200px) {
-      #product-grid { grid-template-columns: repeat(5, 1fr); gap: 18px; }
+      #product-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+      }
     }
 
     /* ── CARD ───────────────────────────────────────────────────── */
@@ -368,16 +535,20 @@
       border: 1px solid var(--border);
       display: flex;
       flex-direction: column;
-      transition: transform .28s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease;
+      transition: transform .28s cubic-bezier(.34, 1.56, .64, 1), box-shadow .25s ease;
       text-decoration: none;
       color: inherit;
       position: relative;
     }
+
     .card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-hover);
     }
-    .card:active { transform: translateY(-2px); }
+
+    .card:active {
+      transform: translateY(-2px);
+    }
 
     /* Heat bar – signature element */
     .heat-bar {
@@ -387,11 +558,26 @@
       flex-shrink: 0;
       border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
     }
-    .heat-bar.h-none  { background: var(--border-2); }
-    .heat-bar.h-low   { background: linear-gradient(90deg,#10B981,#6EE7B7); }
-    .heat-bar.h-mid   { background: linear-gradient(90deg,#F59E0B,#FCD34D); }
-    .heat-bar.h-high  { background: linear-gradient(90deg,#F97316,#FB923C); }
-    .heat-bar.h-fire  { background: linear-gradient(90deg,#EF4444,#FF4500); }
+
+    .heat-bar.h-none {
+      background: var(--border-2);
+    }
+
+    .heat-bar.h-low {
+      background: linear-gradient(90deg, #10B981, #6EE7B7);
+    }
+
+    .heat-bar.h-mid {
+      background: linear-gradient(90deg, #F59E0B, #FCD34D);
+    }
+
+    .heat-bar.h-high {
+      background: linear-gradient(90deg, #F97316, #FB923C);
+    }
+
+    .heat-bar.h-fire {
+      background: linear-gradient(90deg, #EF4444, #FF4500);
+    }
 
     /* Badges */
     .card-badges {
@@ -403,6 +589,7 @@
       gap: 4px;
       z-index: 2;
     }
+
     .badge {
       display: inline-flex;
       align-items: center;
@@ -416,46 +603,27 @@
       white-space: nowrap;
       width: fit-content;
     }
-    .badge-tag   { background: var(--brand); color: #fff; box-shadow: 0 2px 8px rgba(249,115,22,.3); }
-    .badge-tag.s { background: var(--purple); box-shadow: 0 2px 8px rgba(124,58,237,.3); }
-    .badge-tag.b { background: #0284C7; box-shadow: 0 2px 8px rgba(2,132,199,.3); }
-    .badge-disc  { background: var(--green); color: #fff; }
 
-    /* ID chip */
-    .card-id {
-      position: absolute;
-      top: 12px;
-      right: 10px;
-      background: rgba(0,0,0,.72);
-      color: rgba(255,255,255,.8);
-      font-size: 9px;
-      font-weight: 700;
-      font-family: var(--font-price);
-      padding: 3px 7px;
-      border-radius: 6px;
-      z-index: 2;
-      letter-spacing: .4px;
+    .badge-tag {
+      background: var(--brand);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(249, 115, 22, .3);
     }
 
-    /* Image */
-    .card-img-wrap {
-      background: #FFFFFF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 170px;
-      overflow: hidden;
-      padding: 12px;
-      flex-shrink: 0;
-      position: relative;
+    .badge-tag.s {
+      background: var(--purple);
+      box-shadow: 0 2px 8px rgba(124, 58, 237, .3);
     }
-    .card-img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      transition: transform .4s cubic-bezier(.34,1.56,.64,1);
+
+    .badge-tag.b {
+      background: #0284C7;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, .3);
     }
-    .card:hover .card-img { transform: scale(1.09); }
+
+    .badge-disc {
+      background: var(--green);
+      color: #fff;
+    }
 
     /* Countdown Tag */
     .countdown-tag {
@@ -475,6 +643,46 @@
       z-index: 5;
       white-space: nowrap;
       letter-spacing: .5px;
+    }
+
+    /* ID chip */
+    .card-id {
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      background: rgba(0, 0, 0, .72);
+      color: rgba(255, 255, 255, .8);
+      font-size: 9px;
+      font-weight: 700;
+      font-family: var(--font-price);
+      padding: 3px 7px;
+      border-radius: 6px;
+      z-index: 2;
+      letter-spacing: .4px;
+    }
+
+    /* Image */
+    .card-img-wrap {
+      background: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 170px;
+      overflow: hidden;
+      padding: 12px;
+      flex-shrink: 0;
+      border-radius: calc(var(--radius) - 1px) calc(var(--radius) - 1px) 0 0;
+    }
+
+    .card-img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform .4s cubic-bezier(.34, 1.56, .64, 1);
+    }
+
+    .card:hover .card-img {
+      transform: scale(1.09);
     }
 
     /* Body */
@@ -497,7 +705,10 @@
       margin-bottom: 7px;
       transition: color .15s;
     }
-    .card:hover .card-title { color: var(--brand); }
+
+    .card:hover .card-title {
+      color: var(--brand);
+    }
 
     .card-meta {
       display: flex;
@@ -508,8 +719,18 @@
       color: var(--muted);
       margin-bottom: 8px;
     }
-    .stars { display: flex; align-items: center; gap: 3px; color: var(--gold); }
-    .sep { color: #D1D5DB; font-size: 10px; }
+
+    .stars {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      color: var(--gold);
+    }
+
+    .sep {
+      color: #D1D5DB;
+      font-size: 10px;
+    }
 
     /* Pricing */
     .card-pricing {
@@ -532,11 +753,13 @@
       gap: 3px;
       margin-bottom: 5px;
     }
+
     .price-rs {
       font-size: 13px;
       font-weight: 700;
       color: var(--text);
     }
+
     .price-val {
       font-family: var(--font-price);
       font-size: 24px;
@@ -544,6 +767,13 @@
       color: var(--text);
       letter-spacing: -1px;
       line-height: 1;
+    }
+
+    .price-tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
     }
 
     .price-parc {
@@ -556,7 +786,18 @@
       background: var(--green-bg);
       padding: 3px 8px;
       border-radius: 100px;
-      margin-bottom: 10px;
+    }
+
+    .price-save {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 10.5px;
+      font-weight: 800;
+      color: var(--brand);
+      background: var(--brand-glow);
+      padding: 3px 8px;
+      border-radius: 100px;
     }
 
     /* CTA */
@@ -578,23 +819,34 @@
       transition: background .15s, transform .1s, box-shadow .15s;
       letter-spacing: .2px;
     }
+
     .card-cta:hover {
       background: var(--brand-hover);
-      box-shadow: 0 4px 14px rgba(249,115,22,.35);
+      box-shadow: 0 4px 14px rgba(249, 115, 22, .35);
     }
-    .card-cta:active { transform: scale(.97); }
+
+    .card-cta:active {
+      transform: scale(.97);
+    }
 
     /* ── SKELETON ───────────────────────────────────────────────── */
     .skel {
-      background: linear-gradient(90deg,#f0f0f0 25%,#e4e4e4 50%,#f0f0f0 75%);
+      background: linear-gradient(90deg, #f0f0f0 25%, #e4e4e4 50%, #f0f0f0 75%);
       background-size: 200% 100%;
       animation: shimmer 1.4s infinite;
       border-radius: 8px;
     }
+
     @keyframes shimmer {
-      0%   { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
+      0% {
+        background-position: 200% 0;
+      }
+
+      100% {
+        background-position: -200% 0;
+      }
     }
+
     .skel-card {
       background: var(--card);
       border-radius: var(--radius);
@@ -613,7 +865,10 @@
       padding: 72px 20px;
       text-align: center;
     }
-    #empty-state.show { display: flex; }
+
+    #empty-state.show {
+      display: flex;
+    }
 
     .empty-icon-wrap {
       width: 72px;
@@ -628,8 +883,19 @@
       color: var(--muted);
       margin-bottom: 16px;
     }
-    .empty-h { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
-    .empty-p { font-size: 13.5px; color: var(--muted); max-width: 340px; line-height: 1.6; }
+
+    .empty-h {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .empty-p {
+      font-size: 13.5px;
+      color: var(--muted);
+      max-width: 340px;
+      line-height: 1.6;
+    }
 
     /* ── SENTINEL ───────────────────────────────────────────────── */
     #scroll-sentinel {
@@ -642,17 +908,153 @@
       font-weight: 700;
       font-size: 13.5px;
     }
-    #scroll-sentinel.show { display: flex; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .spin-icon { animation: spin 1s linear infinite; font-size: 22px; }
+
+    #scroll-sentinel.show {
+      display: flex;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spin-icon {
+      animation: spin 1s linear infinite;
+      font-size: 22px;
+    }
+
+    /* ── SEO SECTION CONTENT ────────────────────────────────────── */
+    .seo-content-section {
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      color: var(--text-2);
+      font-size: 14.5px;
+      line-height: 1.7;
+      max-width: 900px;
+    }
+
+    .seo-content-section h2 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 16px;
+      letter-spacing: -.4px;
+    }
+
+    .seo-content-section h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 32px;
+      margin-bottom: 14px;
+      letter-spacing: -.2px;
+    }
+
+    .seo-content-section p {
+      margin-bottom: 16px;
+    }
+
+    .seo-content-section ul {
+      margin-left: 24px;
+      margin-bottom: 24px;
+    }
+
+    .seo-content-section li {
+      margin-bottom: 8px;
+    }
+
+    .seo-faq-item {
+      margin-bottom: 20px;
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--border-2);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .seo-faq-item:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .seo-faq-item summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 22px;
+      cursor: pointer;
+      list-style: none; /* Remove a setinha padrão do HTML */
+    }
+
+    .seo-faq-item summary::-webkit-details-marker {
+      display: none; /* Remove a setinha no Safari/Chrome antigos */
+    }
+
+    .seo-faq-item summary h4 {
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 0;
+    }
+
+    .seo-faq-item summary i {
+      color: var(--muted);
+      font-size: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    /* Gira a setinha quando o acordeão estiver aberto */
+    .seo-faq-item[open] summary i {
+      transform: rotate(180deg);
+      color: var(--brand);
+    }
+    
+    .seo-faq-answer {
+      padding: 0 22px 18px 22px;
+    }
+
+    .seo-faq-answer p {
+      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-2);
+    }
+
+    .seo-internal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .seo-link-pill {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-2);
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .seo-link-pill:hover {
+      background: var(--brand);
+      color: #fff;
+      border-color: var(--brand);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(249, 115, 22, 0.2);
+    }
 
     /* ── FOOTER ─────────────────────────────────────────────────── */
     footer {
       background: var(--dark);
-      border-top: 1px solid rgba(255,255,255,.05);
+      border-top: 1px solid rgba(255, 255, 255, .05);
       padding: 22px 20px;
       margin-top: auto;
     }
+
     .footer-in {
       max-width: 1320px;
       margin: 0 auto;
@@ -662,33 +1064,75 @@
       gap: 12px;
       flex-wrap: wrap;
     }
+
     .f-logo {
       font-size: 18px;
       font-weight: 800;
       color: #fff;
       letter-spacing: -.5px;
     }
-    .f-logo em { color: var(--brand); font-style: normal; }
-    .f-copy { font-size: 11.5px; color: rgba(255,255,255,.25); font-weight: 500; }
+
+    .f-logo em {
+      color: var(--brand);
+      font-style: normal;
+    }
+
+    .f-copy {
+      font-size: 11.5px;
+      color: rgba(255, 255, 255, .25);
+      font-weight: 500;
+    }
 
     /* ── RESPONSIVE ─────────────────────────────────────────────── */
     @media (max-width: 639px) {
-      .header-inner { flex-wrap: wrap; gap: 14px; padding: 0 16px; }
-      .verified { display: none; }
-      .logo-name { font-size: 22px; }
-      .page-hd { flex-direction: column; align-items: flex-start; gap: 8px; }
-      #page-title { font-size: 19px; }
-      .price-val { font-size: 21px; }
-      .card-img-wrap { height: 148px; }
+      .header-inner {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 0 16px;
+      }
+
+      .verified {
+        display: none;
+      }
+
+      .logo-name {
+        font-size: 22px;
+      }
+
+      .page-hd {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      #page-title {
+        font-size: 19px;
+      }
+
+      .price-val {
+        font-size: 21px;
+      }
+
+      .card-img-wrap {
+        height: 148px;
+      }
     }
 
     @media (max-width: 370px) {
-      .logo-domain { display: none; }
+      .logo-domain {
+        display: none;
+      }
     }
 
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation: none !important; transition: none !important; }
+
+      *,
+      *::before,
+      *::after {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
@@ -701,14 +1145,10 @@
       <div class="header-inner">
 
         <!-- LOGO -->
-        <a href="#" class="logo">
-          <img
-            src="logo.png"
-            alt="PROMO24"
-            class="logo-img"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          />
-          <div class="logo-fallback" style="display:none">
+        <a href="/" class="logo" title="Página Inicial PROMO24" aria-label="PROMO24 - Ir para a página inicial">
+          <img src="logo.png" alt="Logo oficial PROMO24" class="logo-img"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="logo-fallback" style="display:none" aria-hidden="true">
             <div class="logo-icon">⚡</div>
             <div class="logo-text-wrap">
               <div class="logo-name">PROMO<em>24</em></div>
@@ -719,21 +1159,18 @@
 
         <!-- SEARCH -->
         <div class="search-wrap">
-          <i class="ph ph-magnifying-glass search-icon-l" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.35);font-size:17px;pointer-events:none;z-index:1;"></i>
-          <input
-            type="text"
-            id="search-input"
-            autocomplete="off"
-            placeholder="Busque por produtos, marcas ou código..."
-          />
-          <button id="clear-search">
-            <i class="ph-fill ph-x-circle"></i>
+          <i class="ph ph-magnifying-glass search-icon-l"
+            style="position:absolute;left:16px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.35);font-size:17px;pointer-events:none;z-index:1;" aria-hidden="true"></i>
+          <input type="text" id="search-input" name="q" autocomplete="off"
+            placeholder="Busque por produtos, marcas ou código..." aria-label="Pesquisar ofertas por produto, marca ou código numérico" />
+          <button id="clear-search" aria-label="Limpar texto da busca">
+            <i class="ph-fill ph-x-circle" aria-hidden="true"></i>
           </button>
         </div>
 
         <!-- VERIFIED -->
-        <div class="verified">
-          <i class="ph-fill ph-shield-check"></i>
+        <div class="verified" title="Todas as ofertas são verificadas pela nossa equipe">
+          <i class="ph-fill ph-shield-check" aria-hidden="true"></i>
           Ofertas Verificadas
         </div>
 
@@ -741,15 +1178,15 @@
     </header>
 
     <!-- CATEGORY BAR -->
-    <div class="cat-bar">
+    <nav class="cat-bar" aria-label="Categorias de Ofertas">
       <div class="cat-inner">
-        <button id="cat-left" class="cat-arrow left"><i class="ph-bold ph-caret-left"></i></button>
+        <button id="cat-left" class="cat-arrow left" aria-label="Rolar categorias para esquerda"><i class="ph-bold ph-caret-left" aria-hidden="true"></i></button>
         <div id="category-scroll">
-          <div id="category-filters"></div>
+          <div id="category-filters" role="tablist"></div>
         </div>
-        <button id="cat-right" class="cat-arrow right"><i class="ph-bold ph-caret-right"></i></button>
+        <button id="cat-right" class="cat-arrow right" aria-label="Rolar categorias para direita"><i class="ph-bold ph-caret-right" aria-hidden="true"></i></button>
       </div>
-    </div>
+    </nav>
   </div>
 
   <!-- ── MAIN ── -->
@@ -757,26 +1194,110 @@
     <div class="page-hd">
       <div>
         <h1 id="page-title">Ofertas de Hoje</h1>
-        <p id="products-count">Carregando...</p>
+        <p id="products-count" aria-live="polite">Carregando...</p>
       </div>
-      <div class="updated-pill">
-        <i class="ph-fill ph-fire" style="color:var(--brand)"></i>
+      <div class="updated-pill" title="Nossas ofertas foram atualizadas hoje">
+        <i class="ph-fill ph-fire" style="color:var(--brand)" aria-hidden="true"></i>
         Atualizado hoje
       </div>
     </div>
 
-    <div id="product-grid"></div>
+    <!-- H2 Oculto apenas para leitura semântica do Google e Leitores de Tela -->
+    <h2 class="visually-hidden">Lista de Ofertas Atualizadas Hoje</h2>
+
+    <!-- Container dos Produtos -->
+    <div id="product-grid" role="feed" aria-busy="false"></div>
 
     <div id="empty-state">
-      <div class="empty-icon-wrap"><i class="ph ph-magnifying-glass"></i></div>
-      <p class="empty-h">Nenhuma oferta encontrada</p>
-      <p class="empty-p">Tente buscar com outros termos, verifique a ortografia ou busque pelo código numérico do produto.</p>
+      <div class="empty-icon-wrap" aria-hidden="true"><i class="ph ph-magnifying-glass"></i></div>
+      <h2 class="empty-h">Nenhuma oferta encontrada</h2>
+      <p class="empty-p">Tente buscar com outros termos, verifique a ortografia ou busque pelo código numérico do
+        produto.</p>
     </div>
 
-    <div id="scroll-sentinel">
-      <i class="ph ph-circle-notch spin-icon"></i>
+    <div id="scroll-sentinel" aria-live="polite">
+      <i class="ph ph-circle-notch spin-icon" aria-hidden="true"></i>
       Buscando mais ofertas...
     </div>
+
+    <!-- ── TEXTO ESTRUTURADO PARA SEO (NÃO INTERFERE NO DESIGN E SOMA MUITOS PONTOS) ── -->
+    <section class="seo-content-section" aria-labelledby="seo-title">
+      <h2 id="seo-title">O que é o PROMO24?</h2>
+      <p>
+        O <strong>PROMO24</strong> é o seu portal definitivo para encontrar as <strong>melhores ofertas da internet</strong>. 
+        Nossa plataforma monitora as maiores lojas virtuais do Brasil diariamente para garantir que você economize de verdade em 
+        produtos que deseja. Se você está buscando por smartphones baratos, descontos em TVs ou cupons de eletrodomésticos, nós organizamos tudo em um só lugar.
+      </p>
+
+      <h3>Como o Promo24 funciona?</h3>
+      <p>
+        Nossa equipe conta com ferramentas tecnológicas que rastreiam as quedas de preços em tempo real. A curadoria é feita para filtrar falsas promoções, 
+        listando apenas aquilo que realmente está valendo a pena. A frequência das nossas atualizações é de 24 horas por dia, 7 dias por semana, 
+        garantindo que ofertas relâmpago, cupons de desconto temporários e queimas de estoque cheguem até você antes que esgotem.
+      </p>
+
+      <h3>Quais lojas e categorias são monitoradas?</h3>
+      <p>
+        Trabalhamos monitorando a variação de preços nos gigantes do varejo, assegurando links de compra seguros e confiáveis. Entre as nossas 
+        principais categorias, você encontrará promoções exclusivas de:
+      </p>
+      <ul>
+        <li><strong>Smartphones e Celulares:</strong> Lançamentos e modelos campeões de custo-benefício.</li>
+        <li><strong>Informática e Computadores:</strong> Notebooks, periféricos gamer, componentes de PC e monitores.</li>
+        <li><strong>Casa e Eletrodomésticos:</strong> Airfryers, geladeiras, aspiradores robô e utilidades domésticas.</li>
+        <li><strong>TVs e Áudio:</strong> Smart TVs 4K, OLED, Soundbars e fones de ouvido bluetooth.</li>
+      </ul>
+
+      <h3>Perguntas Frequentes (FAQ)</h3>
+      <div class="seo-faq">
+        <details class="seo-faq-item">
+          <summary>
+            <h4>Como o Promo24 encontra as promoções?</h4>
+            <i class="ph-bold ph-caret-down" aria-hidden="true"></i>
+          </summary>
+          <div class="seo-faq-answer">
+            <p>Através de um monitoramento contínuo do histórico de preços das principais lojas. Se o preço abaixa consideravelmente, o produto entra para a nossa lista de recomendações.</p>
+          </div>
+        </details>
+        <details class="seo-faq-item">
+          <summary>
+            <h4>As ofertas são atualizadas diariamente?</h4>
+            <i class="ph-bold ph-caret-down" aria-hidden="true"></i>
+          </summary>
+          <div class="seo-faq-answer">
+            <p>Sim! Muitas das ofertas aqui presentes possuem limite de tempo ou estoque. Por isso, nossa inteligência atualiza os cards a todo momento.</p>
+          </div>
+        </details>
+        <details class="seo-faq-item">
+          <summary>
+            <h4>O Promo24 vende os produtos?</h4>
+            <i class="ph-bold ph-caret-down" aria-hidden="true"></i>
+          </summary>
+          <div class="seo-faq-answer">
+            <p>Não somos uma loja. Somos uma plataforma de curadoria. Quando você clica em "Pegar Promoção", é direcionado de forma segura para o site oficial (como Mercado Livre, Amazon, etc.) para concluir sua compra com segurança.</p>
+          </div>
+        </details>
+        <details class="seo-faq-item">
+          <summary>
+            <h4>Os preços podem mudar?</h4>
+            <i class="ph-bold ph-caret-down" aria-hidden="true"></i>
+          </summary>
+          <div class="seo-faq-answer">
+            <p>Sim. Devido à alta demanda, as lojas podem alterar seus preços ou finalizar estoques rapidamente. O valor válido é sempre o apresentado no carrinho da loja parceira.</p>
+          </div>
+        </details>
+      </div>
+
+      <h3>Links Úteis e Buscas Populares</h3>
+      <div class="seo-internal-links">
+        <a href="/?q=airfryer" class="seo-link-pill" title="Melhores Airfryers em Promoção">Melhores Airfryers</a>
+        <a href="/?q=iphone" class="seo-link-pill" title="iPhones em Promoção">Smartphones Apple</a>
+        <a href="/?q=samsung" class="seo-link-pill" title="Celulares Samsung Baratos">Ofertas Samsung</a>
+        <a href="/?q=tv%204k" class="seo-link-pill" title="Comprar Smart TV 4K">TVs 4K</a>
+        <a href="/?q=notebook" class="seo-link-pill" title="Notebooks Custo Benefício">Notebooks para Trabalho e Jogos</a>
+      </div>
+    </section>
+
   </main>
 
   <!-- ── FOOTER ── -->
@@ -790,48 +1311,54 @@
   <script>
     /* ── MOCK DATA ──────────────────────────────────────────────── */
     const mockData = [
-      // ADICIONADO SEU ITEM DE TESTE COM DUAS CATEGORIAS AQUI:
-      { id:"42", categoria:"Smartphones & Oferta de Hoje", tagDestaque:"MAIS VENDIDO", descontoSite:"40% OFF", linkImagem:"https://http2.mlstatic.com/D_NQ_NP_840870-MLA96785958150_112025-O.webp", titulo:"Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De 50+12+8, Tela Grande De 6.7 Jetblack", estrelas:"4.9", qtdVendas:"+10 mil", precoAntigoCortado:"4.499,00", precoAtual:"2.697,30", parcelamento:"10x R$299,70 sem juros", linkCurtoAfiliado:"https://meli.la/297PEyr" },
-      { id:"1001", categoria:"Smartphones",  tagDestaque:"IMPERDÍVEL",      descontoSite:"15%", linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=iPhone+15",    titulo:"Apple iPhone 15 (128 GB) - Preto",                  estrelas:"4.9", qtdVendas:"+10mil", precoAntigoCortado:"7.299,00", precoAtual:"6.199,00", parcelamento:"10x de R$ 619,90", linkCurtoAfiliado:"https://promo24.com.br/iphone" },
-      { id:"1002", categoria:"Casa & Oferta de Hoje",        tagDestaque:"MAIS VENDIDO",    descontoSite:"30%", linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=Fritadeira",    titulo:"Fritadeira Elétrica Airfryer Mondial 4L",             estrelas:"4.8", qtdVendas:"+50mil", precoAntigoCortado:"499,00",  precoAtual:"349,00",  parcelamento:"5x de R$ 69,80",  linkCurtoAfiliado:"https://promo24.com.br/airfryer" },
-      { id:"1003", categoria:"TVs",          tagDestaque:"",                descontoSite:"10%", linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=Smart+TV",      titulo:"Smart TV Samsung 50' 4K UHD",                        estrelas:"4.7", qtdVendas:"+5mil",  precoAntigoCortado:"2.599,00", precoAtual:"2.339,00", parcelamento:"10x de R$ 233,90", linkCurtoAfiliado:"https://promo24.com.br/tv" },
-      { id:"1004", categoria:"Smartphones & Oferta de Hoje",  tagDestaque:"NOVO",            descontoSite:"",    linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=Galaxy+S24",    titulo:"Samsung Galaxy S24 Ultra 256GB Titânio",             estrelas:"5.0", qtdVendas:"+1mil",  precoAntigoCortado:"",         precoAtual:"8.999,00", parcelamento:"12x de R$ 749,91", linkCurtoAfiliado:"https://promo24.com.br/s24" },
-      { id:"1005", categoria:"Informática",  tagDestaque:"",                descontoSite:"20%", linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=Notebook",      titulo:"Notebook Dell Inspiron 15 AMD Ryzen 5",               estrelas:"4.6", qtdVendas:"+2mil",  precoAntigoCortado:"3.499,00", precoAtual:"2.799,00", parcelamento:"10x de R$ 279,90", linkCurtoAfiliado:"https://promo24.com.br/dell" },
-      { id:"1006", categoria:"Casa",         tagDestaque:"QUEIMA DE ESTOQUE",descontoSite:"45%", linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=Robo+Aspirador",titulo:"Robô Aspirador de Pó Inteligente",                   estrelas:"4.5", qtdVendas:"+8mil",  precoAntigoCortado:"999,00",  precoAtual:"549,00",  parcelamento:"8x de R$ 68,62",  linkCurtoAfiliado:"https://promo24.com.br/robo" },
-      { id:"1007", categoria:"Smartphones",  tagDestaque:"",                descontoSite:"10%", linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=iPhone+13",    titulo:"Apple iPhone 13 (128 GB) - Meia-noite",               estrelas:"4.8", qtdVendas:"+20mil", precoAntigoCortado:"4.299,00", precoAtual:"3.699,00", parcelamento:"10x de R$ 369,90", linkCurtoAfiliado:"https://promo24.com.br/iphone13" },
-      { id:"1008", categoria:"Informática",  tagDestaque:"GAMER",           descontoSite:"15%", linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=Mouse+Gamer",  titulo:"Mouse Gamer Logitech G203 LIGHTSYNC",                 estrelas:"4.9", qtdVendas:"+15mil", precoAntigoCortado:"149,90",  precoAtual:"119,90", parcelamento:"2x de R$ 59,95",  linkCurtoAfiliado:"https://promo24.com.br/mouse" },
-      { id:"1009", categoria:"Casa",         tagDestaque:"",                descontoSite:"",    linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=Liquidificador",titulo:"Liquidificador Turbo Inox 1200W",                    estrelas:"4.7", qtdVendas:"+4mil",  precoAntigoCortado:"",         precoAtual:"189,90", parcelamento:"3x de R$ 63,30",  linkCurtoAfiliado:"https://promo24.com.br/liquidificador" },
-      { id:"1010", categoria:"TVs",          tagDestaque:"OLED",            descontoSite:"25%", linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=TV+OLED",      titulo:"Smart TV LG OLED 55' 4K",                            estrelas:"5.0", qtdVendas:"+2mil",  precoAntigoCortado:"5.999,00", precoAtual:"4.499,00", parcelamento:"10x de R$ 449,90", linkCurtoAfiliado:"https://promo24.com.br/oled" },
-      { id:"1011", categoria:"Informática",  tagDestaque:"",                descontoSite:"5%",  linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=Monitor",      titulo:"Monitor LG 24' Full HD 75Hz",                        estrelas:"4.8", qtdVendas:"+6mil",  precoAntigoCortado:"699,00",  precoAtual:"659,00", parcelamento:"10x de R$ 65,90",  linkCurtoAfiliado:"https://promo24.com.br/monitor" },
-      { id:"1012", categoria:"Casa",         tagDestaque:"VERÃO",           descontoSite:"40%", linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=Ar+Condicionado",titulo:"Ar Condicionado Split Inverter 12000 BTUs",            estrelas:"4.9", qtdVendas:"+3mil",  precoAntigoCortado:"2.499,00", precoAtual:"1.499,00", parcelamento:"10x de R$ 149,90", linkCurtoAfiliado:"https://promo24.com.br/ar" },
-      { id:"1013", categoria:"Smartphones",  tagDestaque:"",                descontoSite:"",    linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=Moto+G",       titulo:"Motorola Moto G84 256GB 5G",                          estrelas:"4.6", qtdVendas:"+5mil",  precoAntigoCortado:"1.799,00", precoAtual:"1.399,00", parcelamento:"10x de R$ 139,90", linkCurtoAfiliado:"https://promo24.com.br/motog" },
-      { id:"1014", categoria:"Informática",  tagDestaque:"",                descontoSite:"35%", linkImagem:"https://placehold.co/400x400/ffffff/ea580c?text=Teclado",      titulo:"Teclado Mecânico Redragon Kumara",                    estrelas:"4.7", qtdVendas:"+12mil", precoAntigoCortado:"299,00",  precoAtual:"199,00", parcelamento:"4x de R$ 49,75",  linkCurtoAfiliado:"https://promo24.com.br/teclado" }
+      { id: "42", categoria: "Smartphones & Oferta de Hoje", tagDestaque: "MAIS VENDIDO", descontoSite: "40% OFF", linkImagem: "https://http2.mlstatic.com/D_NQ_NP_840870-MLA96785958150_112025-O.webp", titulo: "Celular Samsung Galaxy S25 Fe 5g, 128gb, 8gb Ram, Câmera Tripla De 50+12+8, Tela Grande De 6.7 Jetblack", estrelas: "4.9", qtdVendas: "+10 mil", precoAntigoCortado: "4.499,00", precoAtual: "2.697,30", parcelamento: "10x R$ 299,70", linkCurtoAfiliado: "https://meli.la/297PEyr" },
+      { id: "1001", categoria: "Smartphones", tagDestaque: "IMPERDÍVEL", descontoSite: "15%", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=iPhone+15", titulo: "Apple iPhone 15 (128 GB) - Preto", estrelas: "4.9", qtdVendas: "+10mil", precoAntigoCortado: "7.299,00", precoAtual: "6.199,00", parcelamento: "10x de R$ 619,90", linkCurtoAfiliado: "https://promo24.com.br/iphone" },
+      { id: "1002", categoria: "Casa & Oferta de Hoje", tagDestaque: "MAIS VENDIDO", descontoSite: "30%", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=Fritadeira", titulo: "Fritadeira Elétrica Airfryer Mondial 4L", estrelas: "4.8", qtdVendas: "+50mil", precoAntigoCortado: "499,00", precoAtual: "349,00", parcelamento: "5x de R$ 69,80", linkCurtoAfiliado: "https://promo24.com.br/airfryer" },
+      { id: "1003", categoria: "TVs", tagDestaque: "", descontoSite: "10%", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=Smart+TV", titulo: "Smart TV Samsung 50' 4K UHD", estrelas: "4.7", qtdVendas: "+5mil", precoAntigoCortado: "2.599,00", precoAtual: "2.339,00", parcelamento: "10x de R$ 233,90", linkCurtoAfiliado: "https://promo24.com.br/tv" },
+      { id: "1004", categoria: "Smartphones & Oferta de Hoje", tagDestaque: "NOVO", descontoSite: "", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=Galaxy+S24", titulo: "Samsung Galaxy S24 Ultra 256GB Titânio", estrelas: "5.0", qtdVendas: "+1mil", precoAntigoCortado: "", precoAtual: "8.999,00", parcelamento: "12x de R$ 749,91", linkCurtoAfiliado: "https://promo24.com.br/s24" },
+      { id: "1005", categoria: "Informática", tagDestaque: "", descontoSite: "20%", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=Notebook", titulo: "Notebook Dell Inspiron 15 AMD Ryzen 5", estrelas: "4.6", qtdVendas: "+2mil", precoAntigoCortado: "3.499,00", precoAtual: "2.799,00", parcelamento: "10x de R$ 279,90", linkCurtoAfiliado: "https://promo24.com.br/dell" },
+      { id: "1006", categoria: "Casa", tagDestaque: "QUEIMA DE ESTOQUE", descontoSite: "45%", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=Robo+Aspirador", titulo: "Robô Aspirador de Pó Inteligente", estrelas: "4.5", qtdVendas: "+8mil", precoAntigoCortado: "999,00", precoAtual: "549,00", parcelamento: "8x de R$ 68,62", linkCurtoAfiliado: "https://promo24.com.br/robo" },
+      { id: "1007", categoria: "Smartphones", tagDestaque: "", descontoSite: "10%", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=iPhone+13", titulo: "Apple iPhone 13 (128 GB) - Meia-noite", estrelas: "4.8", qtdVendas: "+20mil", precoAntigoCortado: "4.299,00", precoAtual: "3.699,00", parcelamento: "10x de R$ 369,90", linkCurtoAfiliado: "https://promo24.com.br/iphone13" },
+      { id: "1008", categoria: "Informática", tagDestaque: "GAMER", descontoSite: "15%", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=Mouse+Gamer", titulo: "Mouse Gamer Logitech G203 LIGHTSYNC", estrelas: "4.9", qtdVendas: "+15mil", precoAntigoCortado: "149,90", precoAtual: "119,90", parcelamento: "2x de R$ 59,95", linkCurtoAfiliado: "https://promo24.com.br/mouse" },
+      { id: "1009", categoria: "Casa", tagDestaque: "", descontoSite: "", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=Liquidificador", titulo: "Liquidificador Turbo Inox 1200W", estrelas: "4.7", qtdVendas: "+4mil", precoAntigoCortado: "", precoAtual: "189,90", parcelamento: "3x de R$ 63,30", linkCurtoAfiliado: "https://promo24.com.br/liquidificador" },
+      { id: "1010", categoria: "TVs", tagDestaque: "OLED", descontoSite: "25%", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=TV+OLED", titulo: "Smart TV LG OLED 55' 4K", estrelas: "5.0", qtdVendas: "+2mil", precoAntigoCortado: "5.999,00", precoAtual: "4.499,00", parcelamento: "10x de R$ 449,90", linkCurtoAfiliado: "https://promo24.com.br/oled" },
+      { id: "1011", categoria: "Informática", tagDestaque: "", descontoSite: "5%", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=Monitor", titulo: "Monitor LG 24' Full HD 75Hz", estrelas: "4.8", qtdVendas: "+6mil", precoAntigoCortado: "699,00", precoAtual: "659,00", parcelamento: "10x de R$ 65,90", linkCurtoAfiliado: "https://promo24.com.br/monitor" },
+      { id: "1012", categoria: "Casa", tagDestaque: "VERÃO", descontoSite: "40%", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=Ar+Condicionado", titulo: "Ar Condicionado Split Inverter 12000 BTUs", estrelas: "4.9", qtdVendas: "+3mil", precoAntigoCortado: "2.499,00", precoAtual: "1.499,00", parcelamento: "10x de R$ 149,90", linkCurtoAfiliado: "https://promo24.com.br/ar" },
+      { id: "1013", categoria: "Smartphones", tagDestaque: "", descontoSite: "", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=Moto+G", titulo: "Motorola Moto G84 256GB 5G", estrelas: "4.6", qtdVendas: "+5mil", precoAntigoCortado: "1.799,00", precoAtual: "1.399,00", parcelamento: "10x de R$ 139,90", linkCurtoAfiliado: "https://promo24.com.br/motog" },
+      { id: "1014", categoria: "Informática", tagDestaque: "", descontoSite: "35%", linkImagem: "https://placehold.co/400x400/ffffff/ea580c?text=Teclado", titulo: "Teclado Mecânico Redragon Kumara", estrelas: "4.7", qtdVendas: "+12mil", precoAntigoCortado: "299,00", precoAtual: "199,00", parcelamento: "4x de R$ 49,75", linkCurtoAfiliado: "https://promo24.com.br/teclado" }
     ];
 
     /* ── STATE ──────────────────────────────────────────────────── */
     let produtos = [];
     let currentFiltered = [];
-    
-    // 1. ALTERADO O ESTADO INICIAL PARA "Oferta de Hoje"
-    let currentCategory = "Oferta de Hoje"; 
+    let currentCategory = "Oferta de Hoje";
     let searchQuery = "";
     const PER_PAGE = 10;
     let currentVisible = PER_PAGE;
 
     /* ── DOM REFS ───────────────────────────────────────────────── */
-    const grid      = document.getElementById("product-grid");
+    const grid = document.getElementById("product-grid");
     const filtersEl = document.getElementById("category-filters");
-    const titleEl   = document.getElementById("page-title");
-    const countEl   = document.getElementById("products-count");
-    const emptyEl   = document.getElementById("empty-state");
+    const titleEl = document.getElementById("page-title");
+    const countEl = document.getElementById("products-count");
+    const emptyEl = document.getElementById("empty-state");
     const searchInp = document.getElementById("search-input");
-    const clearBtn  = document.getElementById("clear-search");
-    const sentinel  = document.getElementById("scroll-sentinel");
-    const catLeft   = document.getElementById("cat-left");
-    const catRight  = document.getElementById("cat-right");
+    const clearBtn = document.getElementById("clear-search");
+    const sentinel = document.getElementById("scroll-sentinel");
+    const catLeft = document.getElementById("cat-left");
+    const catRight = document.getElementById("cat-right");
 
     /* ── UTILS ──────────────────────────────────────────────────── */
-    const norm = s => s ? s.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim() : "";
+    const norm = s => s ? s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim() : "";
+
+    const parsePrice = str => {
+      if (!str) return 0;
+      return parseFloat(str.replace(/\./g, '').replace(',', '.'));
+    };
+
+    const formatPrice = num => {
+      return num.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    };
 
     const dedupe = arr => {
       const m = new Map();
@@ -857,8 +1384,8 @@
 
     /* ── SKELETON ───────────────────────────────────────────────── */
     const showSkeleton = () => {
-      grid.innerHTML = Array.from({length: PER_PAGE}, () => `
-        <div class="skel-card">
+      grid.innerHTML = Array.from({ length: PER_PAGE }, () => `
+        <div class="skel-card" aria-hidden="true">
           <div class="heat-bar h-none"></div>
           <div class="card-img-wrap" style="background:#FFFFFF;">
             <div class="skel" style="width:80%;height:80%;"></div>
@@ -898,7 +1425,6 @@
     /* ── PRELOAD IMAGES IN BACKGROUND ───────────────────────────── */
     const preloadImagesBackground = () => {
       const preload = () => {
-        // Filtra os produtos que NÃO são da categoria atual para pré-carregar
         const otherProducts = produtos.filter(p => {
           if (!p.categoria) return true;
           return !p.categoria.includes(currentCategory);
@@ -908,18 +1434,15 @@
           const raw = p.linkImagem || "";
           const imgSrc = raw
             ? (raw.includes("placehold.co") || raw.includes("mlstatic.com")
-                ? raw
-                : `https://wsrv.nl/?url=${raw.replace(/^https?:\/\//,"")}&w=400&output=webp`)
+              ? raw
+              : `https://wsrv.nl/?url=${raw.replace(/^https?:\/\//, "")}&w=400&output=webp`)
             : "https://placehold.co/400x400/f3f4f6/a1a1aa?text=Sem+Foto";
 
-          // Cria um elemento de imagem invisível que força o navegador a salvar no cache
           const img = new Image();
           img.src = imgSrc;
         });
       };
 
-      // O requestIdleCallback garante que isso só aconteça quando o celular/PC 
-      // terminar de carregar o visual principal, para não deixar o site lento.
       if ('requestIdleCallback' in window) {
         requestIdleCallback(preload);
       } else {
@@ -929,22 +1452,18 @@
 
     /* ── CATEGORIES ─────────────────────────────────────────────── */
     const getCategories = () => {
-      // Usamos Set para não duplicar categorias
       const s = new Set();
-      
-      produtos.forEach(p => { 
+
+      produtos.forEach(p => {
         if (p.categoria) {
-          // 2. LÓGICA DE SPLIT: Separa categorias se houver o "&"
           const cats = p.categoria.split('&').map(c => c.trim());
           cats.forEach(c => s.add(c));
-        } 
+        }
       });
-      
-      // 3. ORDENAÇÃO FORÇADA: Removemos as duas principais para garantir a ordem delas
+
       s.delete("Oferta de Hoje");
       s.delete("Todos");
-      
-      // Retorna a ordem exata: 1. Oferta de Hoje, 2. Todos, 3. O resto ordenado alfabeticamente
+
       return ["Oferta de Hoje", "Todos", ...Array.from(s).sort()];
     };
 
@@ -954,6 +1473,8 @@
         const btn = document.createElement("button");
         btn.className = "cat-btn" + (currentCategory === cat ? " active" : "");
         btn.textContent = cat;
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-selected', currentCategory === cat ? 'true' : 'false');
         btn.onclick = () => {
           currentCategory = cat;
           currentVisible = PER_PAGE;
@@ -962,17 +1483,16 @@
         };
         filtersEl.appendChild(btn);
       });
-      // Verifica e atualiza se as setinhas devem aparecer após gerar os botões
       setTimeout(updateArrows, 50);
     };
 
-    /* ── CARD TEMPLATE ──────────────────────────────────────────── */
+    /* ── CARD TEMPLATE (SEO OTIMIZADO) ──────────────────────────── */
     const cardHTML = p => {
       const raw = p.linkImagem || "";
       const imgSrc = raw
         ? (raw.includes("placehold.co") || raw.includes("mlstatic.com")
-            ? raw
-            : `https://wsrv.nl/?url=${raw.replace(/^https?:\/\//,"")}&w=400&output=webp`)
+          ? raw
+          : `https://wsrv.nl/?url=${raw.replace(/^https?:\/\//, "")}&w=400&output=webp`)
         : "https://placehold.co/400x400/f3f4f6/a1a1aa?text=Sem+Foto";
 
       const badges = [
@@ -982,8 +1502,24 @@
 
       const isOfertaDeHoje = p.categoria && p.categoria.includes("Oferta de Hoje");
 
+      let economyHTML = "";
+      if (p.precoAntigoCortado && p.precoAtual) {
+        const oldP = parsePrice(p.precoAntigoCortado);
+        const newP = parsePrice(p.precoAtual);
+        if (oldP > newP) {
+          const diff = oldP - newP;
+          economyHTML = `<div class="price-save"><i class="ph-fill ph-piggy-bank"></i>Economize R$ ${formatPrice(diff)}</div>`;
+        }
+      }
+
+      // Convertemos o preço para o padrão numérico do Microdata Schema.org (1999.90 em vez de 1.999,90)
+      const schemaPrice = p.precoAtual ? p.precoAtual.replace(/\./g, '').replace(',', '.') : "0.00";
+
       return `
-        <article onclick="window.open('${p.linkCurtoAfiliado}', '_blank')" class="card" style="cursor: pointer;">
+        <a href="${p.linkCurtoAfiliado}" target="_blank" rel="sponsored noopener noreferrer" class="card" itemscope itemtype="https://schema.org/Product" title="Ver oferta: ${p.titulo}">
+          
+          <meta itemprop="url" content="${p.linkCurtoAfiliado}">
+          
           <div class="heat-bar ${heatClass(p.descontoSite)}"></div>
           ${badges ? `<div class="card-badges">${badges}</div>` : ""}
           ${isOfertaDeHoje ? `<div class="countdown-tag" data-countdown><i class="ph-bold ph-timer"></i> <span class="time">--:--:--</span></div>` : ''}
@@ -991,8 +1527,9 @@
           <div class="card-img-wrap">
             <img
               src="${imgSrc}"
-              alt="${p.titulo}"
+              alt="Foto do produto ${p.titulo}"
               class="card-img"
+              itemprop="image"
               referrerpolicy="no-referrer"
               loading="lazy"
               onerror="this.src='https://placehold.co/400x400/f3f4f6/a1a1aa?text=Sem+Imagem'"
@@ -1000,26 +1537,42 @@
           </div>
 
           <div class="card-body">
-            <h3 class="card-title">${p.titulo}</h3>
+            <h3 class="card-title" itemprop="name">${p.titulo}</h3>
 
             ${(p.estrelas || p.qtdVendas) ? `
               <div class="card-meta">
-                ${p.estrelas ? `<div class="stars"><i class="ph-fill ph-star"></i>${p.estrelas}</div>` : ""}
+                ${p.estrelas ? `
+                  <div class="stars" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="${p.estrelas}">
+                    <meta itemprop="bestRating" content="5">
+                    <i class="ph-fill ph-star"></i>${p.estrelas}
+                  </div>` : ""}
                 ${p.estrelas && p.qtdVendas ? `<span class="sep">•</span>` : ""}
                 ${p.qtdVendas ? `<span>${p.qtdVendas}</span>` : ""}
               </div>` : ""}
 
-            <div class="card-pricing">
+            <div class="card-pricing" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              <meta itemprop="priceCurrency" content="BRL">
+              <meta itemprop="price" content="${schemaPrice}">
+              <link itemprop="availability" href="https://schema.org/InStock">
+
               ${p.precoAntigoCortado ? `<div class="price-old">R$ ${p.precoAntigoCortado}</div>` : ""}
               <div class="price-row">
                 <span class="price-rs">R$</span>
                 <span class="price-val">${p.precoAtual}</span>
               </div>
-              ${p.parcelamento ? `<div class="price-parc"><i class="ph ph-credit-card"></i>${p.parcelamento}</div>` : ""}
-              <button class="card-cta">Pegar Promoção <i class="ph-bold ph-arrow-up-right"></i></button>
+              
+              ${(p.parcelamento || economyHTML) ? `
+                <div class="price-tags-wrap">
+                  ${p.parcelamento ? `<div class="price-parc"><i class="ph ph-credit-card"></i>${p.parcelamento}</div>` : ""}
+                  ${economyHTML}
+                </div>
+              ` : ""}
+              
+              <span class="card-cta" role="button">Pegar Promoção <i class="ph-bold ph-arrow-up-right"></i></span>
             </div>
           </div>
-        </article>
+        </a>
       `;
     };
 
@@ -1029,12 +1582,9 @@
       if (searchQuery && isNum) {
         currentFiltered = produtos.filter(p => String(p.id) === searchQuery);
       } else {
-        
-        // 4. LÓGICA DE FILTRO ATUALIZADA:
         if (currentCategory === "Todos") {
           currentFiltered = [...produtos];
         } else {
-          // Filtra produtos checando se o array gerado pelo split contém a categoria atual
           currentFiltered = produtos.filter(p => {
             if (!p.categoria) return false;
             const productCategories = p.categoria.split('&').map(c => c.trim());
@@ -1053,7 +1603,6 @@
     const renderProducts = () => {
       applyFilters();
 
-      // Title logic updated to support the custom names
       if (searchQuery) {
         const isNum = /^\d+$/.test(searchQuery);
         titleEl.textContent = isNum ? `Buscando código #${searchQuery}` : `Resultados para "${searchQuery}"`;
@@ -1125,8 +1674,8 @@
       scrollLeft = slider.scrollLeft;
     });
     slider.addEventListener("mouseleave", () => { isDown = false; slider.classList.remove("dragging"); });
-    slider.addEventListener("mouseup",    () => { isDown = false; slider.classList.remove("dragging"); });
-    slider.addEventListener("mousemove",  e => {
+    slider.addEventListener("mouseup", () => { isDown = false; slider.classList.remove("dragging"); });
+    slider.addEventListener("mousemove", e => {
       if (!isDown) return;
       e.preventDefault();
       slider.scrollLeft = scrollLeft - (e.pageX - slider.offsetLeft - startX) * 1.5;
@@ -1135,9 +1684,8 @@
     /* ── ARROWS LOGIC ───────────────────────────────────────────── */
     const updateArrows = () => {
       if (!slider) return;
-      // Calcula o máximo que a barra consegue rolar
       const maxScroll = slider.scrollWidth - slider.clientWidth;
-      
+
       if (slider.scrollLeft > 0) catLeft.classList.add("show");
       else catLeft.classList.remove("show");
 
@@ -1162,7 +1710,7 @@
         const now = new Date();
         const midnight = new Date();
         midnight.setHours(23, 59, 59, 999);
-        
+
         const diff = midnight - now;
         if (diff <= 0) return;
 
@@ -1176,8 +1724,8 @@
         });
       };
 
-      updateTimers(); // Atualiza na hora
-      setInterval(updateTimers, 1000); // Mantém atualizando a cada segundo
+      updateTimers();
+      setInterval(updateTimers, 1000);
     };
 
     /* ── INIT ───────────────────────────────────────────────────── */
@@ -1185,9 +1733,9 @@
       load();
       setupScroll();
       startCountdown();
-      // Aguarda o layout inicial para aplicar as setinhas
       setTimeout(updateArrows, 100);
     });
   </script>
 </body>
+
 </html>
