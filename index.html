@@ -205,19 +205,34 @@
     .cat-bar { background: var(--dark-2); border-bottom: 1px solid rgba(255, 255, 255, .07); position: relative; }
     .cat-inner { max-width: 1320px; margin: 0 auto; padding: 0 32px; position: relative; display: flex; align-items: center; gap: 16px; }
     
-    .cat-scroll-wrap { position: relative; flex: 1; display: flex; align-items: center; overflow: hidden; }
+    .cat-scroll-wrap { 
+      position: relative; 
+      flex: 1; 
+      display: flex; 
+      align-items: center; 
+      overflow: hidden; 
+      gap: 8px; /* Espaço entre setas e categorias */
+    }
     
     .cat-arrow {
-      position: absolute; top: 50%; transform: translateY(-50%); width: 28px; height: 28px;
-      background: var(--dark-3); color: #fff; border: 1px solid rgba(255, 255, 255, .15);
-      border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      cursor: pointer; z-index: 10; opacity: 0; visibility: hidden; transition: all 0.2s ease;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, .4); font-size: 14px;
+      width: 28px; 
+      height: 28px;
+      background: var(--dark-3); 
+      color: #fff; 
+      border: 1px solid rgba(255, 255, 255, .15);
+      border-radius: 50%; 
+      display: none; 
+      align-items: center; 
+      justify-content: center;
+      cursor: pointer; 
+      z-index: 10; 
+      transition: background 0.2s, border-color 0.2s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .4); 
+      font-size: 14px;
+      flex-shrink: 0;
     }
-    .cat-arrow.show { opacity: 1; visibility: visible; }
+    .cat-arrow.show { display: flex; }
     .cat-arrow:hover { background: var(--brand); border-color: var(--brand); }
-    .cat-arrow.left { left: 0; }
-    .cat-arrow.right { right: 0; }
 
     #category-scroll {
       display: flex; gap: 6px; padding: 10px 0; overflow-x: auto;
@@ -549,11 +564,11 @@
       <div class="cat-inner">
         
         <div class="cat-scroll-wrap">
-          <button id="cat-left" class="cat-arrow left" aria-label="Rolar categorias para esquerda"><i class="ph-bold ph-caret-left" aria-hidden="true"></i></button>
+          <button id="cat-left" class="cat-arrow" aria-label="Rolar categorias para esquerda"><i class="ph-bold ph-caret-left" aria-hidden="true"></i></button>
           <div id="category-scroll">
             <div id="category-filters" role="tablist"></div>
           </div>
-          <button id="cat-right" class="cat-arrow right" aria-label="Rolar categorias para direita"><i class="ph-bold ph-caret-right" aria-hidden="true"></i></button>
+          <button id="cat-right" class="cat-arrow" aria-label="Rolar categorias para direita"><i class="ph-bold ph-caret-right" aria-hidden="true"></i></button>
         </div>
 
         <!-- BOTÃO FILTROS AVANÇADOS -->
@@ -793,7 +808,7 @@
     /* ── STATE ──────────────────────────────────────────────────── */
     let produtos = [];
     let currentFiltered = [];
-    let currentCategory = "Celular"; // Teste inicial focado em celular para ver os filtros funcionais
+    let currentCategory = "Oferta de Hoje"; // Categoria Inicial Ajustada
     let searchQuery = "";
     let currentSort = "maior_desconto_preco"; 
     const PER_PAGE = 10;
@@ -870,9 +885,12 @@
       return oldP > newP ? oldP - newP : -1;
     };
 
-    /* Função que avalia e mostra/esconde os filtros de celular baseado na categoria */
+    /* Função que avalia e mostra/esconde os filtros dinâmicos */
     const checkDynamicFiltersVisibility = () => {
-      const isCelular = currentCategory.toLowerCase().includes("celular");
+      const catLower = currentCategory.toLowerCase();
+      // Verifica Smartphone ou Celular (independente de ser plural ou singular devido ao "includes")
+      const isCelular = catLower.includes("celular") || catLower.includes("smartphone");
+      
       document.querySelectorAll('.dynamic-celular').forEach(col => {
         col.style.display = isCelular ? "block" : "none";
       });
@@ -1090,8 +1108,9 @@
       if (fFrete) currentFiltered = currentFiltered.filter(p => p.freteGratis === true);
       if (fPromo) currentFiltered = currentFiltered.filter(p => !!p.descontoSite);
 
-      // 3. Filtros Avançados Dinâmicos (Celular)
-      if (currentCategory.toLowerCase().includes("celular")) {
+      // 3. Filtros Avançados Dinâmicos (Celular / Smartphone)
+      const catLower = currentCategory.toLowerCase();
+      if (catLower.includes("celular") || catLower.includes("smartphone")) {
         // Armazenamento
         const checkedStorage = Array.from(document.querySelectorAll('#filter-storage-group input:checked')).map(cb => cb.value);
         if (checkedStorage.length > 0) {
@@ -1217,7 +1236,7 @@
       if (!slider) return;
       const maxScroll = slider.scrollWidth - slider.clientWidth;
 
-      if (slider.scrollLeft > 0) catLeft.classList.add("show");
+      if (slider.scrollLeft > 2) catLeft.classList.add("show");
       else catLeft.classList.remove("show");
 
       if (slider.scrollLeft < maxScroll - 2) catRight.classList.add("show");
