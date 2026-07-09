@@ -377,18 +377,18 @@
     .sort-option:hover { background: var(--bg); color: var(--text); }
     .sort-option.active { background: var(--brand-glow); color: var(--brand); font-weight: 700; }
 
-    /* PRODUCT GRID */
-    #product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    @media (min-width: 600px) { #product-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; } }
-    @media (min-width: 900px) { #product-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; } }
-    @media (min-width: 1200px) { #product-grid { grid-template-columns: repeat(5, 1fr); gap: 18px; } }
+    /* PRODUCT GRID - ESPAÇAMENTOS MELHORADOS */
+    #product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px 12px; }
+    @media (min-width: 600px) { #product-grid { grid-template-columns: repeat(3, 1fr); gap: 36px 16px; } }
+    @media (min-width: 900px) { #product-grid { grid-template-columns: repeat(4, 1fr); gap: 40px 18px; } }
+    @media (min-width: 1200px) { #product-grid { grid-template-columns: repeat(5, 1fr); gap: 44px 20px; } }
 
     /* CARD */
     .card {
       background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow-card);
       border: 1px solid var(--border); display: flex; flex-direction: column;
       transition: transform .28s cubic-bezier(.34, 1.56, .64, 1), box-shadow .25s ease;
-      text-decoration: none; color: inherit; position: relative;
+      text-decoration: none; color: inherit; position: relative; cursor: pointer;
     }
     .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
     .card:active { transform: translateY(-2px); }
@@ -453,6 +453,7 @@
       padding: 10px 14px; background: var(--brand); color: #fff; font-family: var(--font);
       font-size: 12.5px; font-weight: 800; border: none; border-radius: 12px; cursor: pointer;
       transition: background .15s, transform .1s, box-shadow .15s; letter-spacing: .2px;
+      white-space: nowrap; /* Garante que o botão fique em uma linha só */
     }
     .card-cta:hover { background: var(--brand-hover); box-shadow: 0 4px 14px rgba(249, 115, 22, .35); }
     .card-cta:active { transform: scale(.97); }
@@ -520,6 +521,16 @@
       .card-img-wrap { height: 148px; }
       .btn-toggle-filters span { display: none; }
     }
+    
+    /* FIX PARA TELAS MUITO PEQUENAS (Evita quebrar texto dos cards) */
+    @media (max-width: 400px) {
+      #product-grid { gap: 32px 8px; } /* Ajuste fino de gap */
+      .card-cta { font-size: 11.5px; padding: 8px 6px; gap: 4px; }
+      .price-val { font-size: 19px; }
+      .card-title { font-size: 11.5px; }
+      .badge { font-size: 8px; padding: 3px 6px; }
+    }
+    
     @media (max-width: 370px) { .logo-domain { display: none; } }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
   </style>
@@ -679,8 +690,8 @@
             <i class="ph-bold ph-caret-down"></i>
           </button>
           <div id="sort-menu" class="sort-menu" role="menu">
-            <button class="sort-option active" data-value="mais_relevante" role="menuitem">Mais Relevante</button>
-            <button class="sort-option" data-value="maior_desconto_preco" role="menuitem">Maior desconto em preço</button>
+            <button class="sort-option" data-value="mais_relevante" role="menuitem">Mais Relevante</button>
+            <button class="sort-option active" data-value="maior_desconto_preco" role="menuitem">Maior desconto em preço</button>
             <button class="sort-option" data-value="maior_desconto" role="menuitem">Maior desconto em %</button>
             <button class="sort-option" data-value="menor_preco" role="menuitem">Menor Preço</button>
             <button class="sort-option" data-value="maior_preco" role="menuitem">Maior Preço</button>
@@ -1025,9 +1036,13 @@
       // Preço padronizado pro Microdata
       const schemaPrice = p.precoAtual ? p.precoAtual.replace(/\./g, '').replace(',', '.') : "0.00";
 
+      // ALTERAÇÃO 1: Div com onclick ao invés de tag "a" para esconder URL embaixo.
       return `
-        <a href="${p.linkCurtoAfiliado}" target="_blank" rel="sponsored noopener noreferrer" class="card" itemscope itemtype="https://schema.org/Product" title="Ver oferta: ${p.titulo}">
+        <div onclick="window.open('${p.linkCurtoAfiliado}', '_blank', 'noopener,noreferrer')" class="card" itemscope itemtype="https://schema.org/Product" title="Ver oferta: ${p.titulo}" role="link" tabindex="0" onkeypress="if(event.key==='Enter') window.open('${p.linkCurtoAfiliado}', '_blank', 'noopener,noreferrer')">
           <meta itemprop="url" content="${p.linkCurtoAfiliado}">
+          
+          <!-- Link oculto para manter rastreabilidade de Bots/SEO do Google -->
+          <a href="${p.linkCurtoAfiliado}" target="_blank" rel="sponsored noopener noreferrer" style="display:none;" aria-hidden="true">Ver Oferta</a>
           
           <div class="heat-bar ${heatClass(p.descontoSite)}"></div>
           ${badges ? `<div class="card-badges">${badges}</div>` : ""}
@@ -1073,7 +1088,7 @@
               <span class="card-cta" role="button">Pegar Promoção <i class="ph-bold ph-arrow-up-right"></i></span>
             </div>
           </div>
-        </a>
+        </div>
       `;
     };
 
