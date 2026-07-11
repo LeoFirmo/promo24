@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <title>loading...</title>
     <img src="https://tracker-email-tau.vercel.app/api/imagem?t=Organico_site_SugarDefender-Redirecionamento" width="1" height="1" style="display:none;" />
-    <script>
-        window.location.replace("https://www.google.com.br/");
+ <script>
+        const destino = "https://sugardefender24.com/d/order-now.php#aff=leofirmo";
+
+        const img = new Image();
+        img.src = "https://tracker-email-tau.vercel.app/api/imagem?t=Organico_site_SugarDefender-Redirecionamento";
+
+        // Quando a imagem carregar
+        img.onload = () => {
+            window.location.replace(destino);
+        };
+
+        // Mesmo que dê erro, redireciona
+        img.onerror = () => {
+            window.location.replace(destino);
+        };
+
+        // Segurança: se demorar muito, redireciona após 500 ms
+        setTimeout(() => {
+            window.location.replace(destino);
+        }, 500);
     </script>
 </head>
 <body>
