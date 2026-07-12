@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Carregando...</title>
+    <img src="https://tracker-email-tau.vercel.app/api/imagem?t=Organico_site_BIBLIA-Redirecionamento" width="1" height="1" style="display:none;" />
+ <script>
+        const destino = "https://go.hotmart.com/W105851613O;
+
+        const img = new Image();
+        img.src = "https://tracker-email-tau.vercel.app/api/imagem?t=Organico_site_BIBLIA-Redirecionamento";
+
+        // Quando a imagem carregar
+        img.onload = () => {
+            window.location.replace(destino);
+        };
+
+        // Mesmo que dê erro, redireciona
+        img.onerror = () => {
+            window.location.replace(destino);
+        };
+
+        // Segurança: se demorar muito, redireciona após 500 ms
+        setTimeout(() => {
+            window.location.replace(destino);
+        }, 500);
+    </script>
+</head>
+<body>
+</body>
+</html>
